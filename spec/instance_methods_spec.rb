@@ -1,5 +1,5 @@
 describe 'Dog' do
-  it 'is defined' do
+  it 'is defined within lib/dog.rb' do
     expect(defined?(Dog)).to be_truthy
     expect(Dog).to be_a(Class)
   end
@@ -10,8 +10,7 @@ describe 'Dog' do
       expect(fido).to respond_to(:bark)
     end
 
-  
-
+    it 'puts "Woof!"' do
       expect($stdout).to receive(:puts).with("Woof!")
 
       fido = Dog.new
@@ -35,7 +34,7 @@ describe 'Dog' do
 end
 
 describe 'Person' do
-  it 'is defined' do
+  it 'is defined within lib/person.rb' do
     expect(defined?(Person)).to be_truthy
     expect(Person).to be_a(Class)
   end
