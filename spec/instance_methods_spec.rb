@@ -10,7 +10,8 @@ describe 'Dog' do
       expect(fido).to respond_to(:bark)
     end
 
-    it 'puts "Woof!"' do
+  
+
       expect($stdout).to receive(:puts).with("Woof!")
 
       fido = Dog.new
